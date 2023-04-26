@@ -3,6 +3,7 @@
 
 $('#downloadButton').click(() => {
     // TODO
+    window.open('/api/Documents/Download/test');
 });
 
 $('#addElementButton').click(() => {
