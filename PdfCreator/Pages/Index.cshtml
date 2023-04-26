@@ -5,8 +5,14 @@
 }
 
 <div class="row mt-5">
-    <div class="col-lg-3 text-center">
-        <button id="addElementButton" class="btn btn-success">Dodaj element</button>
+    <div class="col-lg-3">
+        <div class="form-group p-4">
+            <label for="elementText">Tekst:</label>
+            <input type="text" id="elementText" class="form-control" />
+        </div>
+        <div class="text-center">
+            <button id="addElementButton" class="btn btn-success">Dodaj element</button>
+        </div>
     </div>
     <div id="documentContainer" class="col-lg-9 p-4 border border-2 border-dark shadow"></div>
 </div>

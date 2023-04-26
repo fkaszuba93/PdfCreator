@@ -8,4 +8,6 @@ $('#downloadButton').click(() => {
 
 $('#addElementButton').click(() => {
     // TODO
+    var text = $('#elementText').val();
+    $('#documentContainer').append(`<div>${text}</div>`);
 });
