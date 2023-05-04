@@ -13,5 +13,12 @@ namespace PdfCreator.Controller
             var fs = new FileStream("c:\\temp\\test.docx", FileMode.Open);
             return File(fs, "application/msword", "test.docx");
         }
+
+        [HttpPost]
+        [Route("[action]")]
+        public string Create([FromBody] List<string> documentData)
+        {
+            return "test";
+        }
     }
 }
