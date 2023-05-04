@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<DocumentsService>();
+builder.Services.AddScoped<IDocumentGenerator, DevExpressDocumentGenerator>();
 
 var app = builder.Build();
 
