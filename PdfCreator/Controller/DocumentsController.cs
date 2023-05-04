@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PdfCreator
+namespace PdfCreator.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
