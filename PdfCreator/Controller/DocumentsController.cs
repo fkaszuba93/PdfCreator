@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PdfCreator.Service;
 
 namespace PdfCreator.Controller
 {
@@ -7,6 +8,13 @@ namespace PdfCreator.Controller
     [ApiController]
     public class DocumentsController : ControllerBase
     {
+        private readonly DocumentsService documentsService;
+
+        public DocumentsController(DocumentsService documentsService)
+        {
+            this.documentsService = documentsService;
+        }
+
         [Route("[action]/{id}")]
         public IActionResult Download(string id)
         {
@@ -18,7 +26,7 @@ namespace PdfCreator.Controller
         [Route("[action]")]
         public string Create([FromBody] List<string> documentData)
         {
-            return "test";
+            return documentsService.CreateDocument(documentData);
         }
     }
 }
