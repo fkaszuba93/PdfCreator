@@ -1,11 +1,9 @@
 
-const documentData = [];
-
 $('#downloadButton').click(() => {
     $.ajax({
         type: 'POST',
         url: '/api/Documents/Create',
-        data: JSON.stringify(documentData),
+        data: JSON.stringify($('#documentContainer').html()),
         contentType: 'application/json',
         success: (id) => {
             window.open(`/api/Documents/Download/${id}`);
@@ -16,5 +14,4 @@ $('#downloadButton').click(() => {
 $('#addElementButton').click(() => {
     var text = $('#elementText').val();
     $('#documentContainer').append(`<div>${text}</div>`);
-    documentData.push(text);
 });

@@ -9,9 +9,9 @@
             this.documentGenerator = documentGenerator;
         }
 
-        public string CreateDocument(List<string> documentData)
+        public string CreateDocument(string html)
         {
-            documentGenerator.CreateDocument(documentData);
+            documentGenerator.CreateDocument(html);
             return "test";
         }
     }

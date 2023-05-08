@@ -18,15 +18,15 @@ namespace PdfCreator.Controller
         [Route("[action]/{id}")]
         public IActionResult Download(string id)
         {
-            var fs = new FileStream("c:\\temp\\test.docx", FileMode.Open);
-            return File(fs, "application/msword", "test.docx");
+            var fs = new FileStream("c:\\temp\\test.pdf", FileMode.Open);
+            return File(fs, "application/pdf", "test.pdf");
         }
 
         [HttpPost]
         [Route("[action]")]
-        public string Create([FromBody] List<string> documentData)
+        public string Create([FromBody] string html)
         {
-            return documentsService.CreateDocument(documentData);
+            return documentsService.CreateDocument(html);
         }
     }
 }

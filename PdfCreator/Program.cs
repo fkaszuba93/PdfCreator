@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<DocumentsService>();
+builder.Services.AddScoped<IDocumentGenerator, SelectPdfDocumentGenerator>();
 
 var app = builder.Build();
 

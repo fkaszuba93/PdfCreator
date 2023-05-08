@@ -2,6 +2,6 @@
 {
     public interface IDocumentGenerator
     {
-        void CreateDocument(List<string> documentData);
+        void CreateDocument(string html);
     }
 }
