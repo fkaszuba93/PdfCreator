@@ -13,5 +13,5 @@ $('#downloadButton').click(() => {
 
 $('#addElementButton').click(() => {
     var text = $('#elementText').val();
-    $('#documentContainer').append(`<div>${text}</div>`);
+    $('#documentContent').append(`<div style="padding-bottom: 0.25rem;">${text}</div>`);
 });
