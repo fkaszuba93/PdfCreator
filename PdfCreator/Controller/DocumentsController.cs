@@ -18,8 +18,8 @@ namespace PdfCreator.Controller
         [Route("[action]/{id}")]
         public IActionResult Download(string id)
         {
-            var fs = new FileStream("c:\\temp\\test.pdf", FileMode.Open);
-            return File(fs, "application/pdf", "test.pdf");
+            var fs = documentsService.GetDocumentById(id);
+            return File(fs, "application/pdf", "Dokument.pdf");
         }
 
         [HttpPost]
