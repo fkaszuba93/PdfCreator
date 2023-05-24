@@ -1,4 +1,6 @@
-﻿namespace PdfCreator.Service
+﻿using PdfCreator.Model;
+
+namespace PdfCreator.Service
 {
     public class DocumentsService
     {
@@ -11,8 +13,11 @@
 
         public string CreateDocument(string html)
         {
-            documentGenerator.CreateDocument(html);
-            return "test";
+            Document document = new();
+            string path = $"obj\\Documents\\{document.Id}.pdf";
+            documentGenerator.CreateDocument(html, path);
+            document.Path = new FileInfo(path).FullName;
+            return document.Id;
         }
     }
 }

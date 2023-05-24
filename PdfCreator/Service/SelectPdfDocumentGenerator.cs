@@ -4,7 +4,7 @@ namespace PdfCreator.Service
 {
     public class SelectPdfDocumentGenerator : IDocumentGenerator
     {
-        public void CreateDocument(string html)
+        public void CreateDocument(string html, string path)
         {
             HtmlToPdf converter = new();
 
@@ -12,7 +12,7 @@ namespace PdfCreator.Service
             converter.Options.PdfPageOrientation = PdfPageOrientation.Portrait;
 
             PdfDocument doc = converter.ConvertHtmlString(html);
-            doc.Save("c:\\temp\\test.pdf");
+            doc.Save(path);
             doc.Close();
         }
     }

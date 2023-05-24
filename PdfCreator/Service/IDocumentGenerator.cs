@@ -2,6 +2,6 @@
 {
     public interface IDocumentGenerator
     {
-        void CreateDocument(string html);
+        void CreateDocument(string html, string path);
     }
 }
