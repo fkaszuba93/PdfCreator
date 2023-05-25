@@ -6,11 +6,23 @@
 
 <div class="row mt-5">
     <div class="col-lg-3">
-        <div class="form-group p-4">
+        <div class="form-group px-4 py-2">
+            <label for="elementType">Typ:</label>
+            <select id="elementType" name="elementType" class="form-control">
+                <option value="text" selected>Tekst</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio</option>
+            </select>
+        </div>
+        <div class="form-group px-4 py-2">
             <label for="elementText">Tekst:</label>
             <input type="text" id="elementText" class="form-control" />
         </div>
-        <div class="text-center">
+        <div class="form-group px-4 py-2">
+            <label for="elementId">ID:</label>
+            <input type="text" id="elementId" class="form-control" />
+        </div>
+        <div class="text-center mt-4">
             <button id="addElementButton" class="btn btn-success">Dodaj element</button>
         </div>
     </div>
